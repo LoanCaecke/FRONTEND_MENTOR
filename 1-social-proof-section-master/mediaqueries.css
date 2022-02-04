@@ -1,0 +1,62 @@
+@media (max-width: 770px) {
+    body {
+        grid-template-areas: "hd hd hd" "rt rt rt" "fb fb fb";
+    }
+    .rating-card-1 {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .rating-card-2 {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .rating-card-3 {
+        margin-left: 0px;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .header-presentation {
+        padding-right: 0;
+    }
+
+    .header-text {
+        text-align: center;
+    }
+}
+
+@media (min-width: 771px) and (max-width: 1360px) {
+    .rating-card-1 {
+        margin-left: -160px;
+        margin-right: 0px;
+    }
+    .rating-card-2 {
+        margin-left: -160px;
+        margin-right: 0px;
+    }
+    .rating-card-3 {
+        margin-left: -160px;
+    }
+}
+
+@media (max-width: 1055px) {
+    [class^="rating-card"] {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 2px 15px;
+        padding-bottom: 5px;
+    }
+
+
+    .rating-card-stars {
+        display: block;
+        padding: 0;
+        margin-top: 10px;
+    }
+}
+

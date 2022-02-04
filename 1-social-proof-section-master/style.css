@@ -1,0 +1,141 @@
+:root {
+    --dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+body {
+    padding: 10%;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    background-image: url('images/bg-pattern-bottom-desktop.svg'), url('images/bg-pattern-top-desktop.svg');
+    background-repeat: no-repeat;
+   
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "hd hd rt" 
+        "fb fb fb";
+    gap: 10px;
+}
+
+h1 {
+    margin: 0;
+    color: var(--dark-magenta);
+    font-size: 52px;
+}
+
+.bg-svg {
+    position: absolute;
+}
+
+.header-presentation {
+    grid-column: hd-start / hd-end;
+    padding-right: 20vw;
+}
+
+.header-text {
+    color: var(--dark-grayish-magenta);
+    line-height: 25px;
+}
+
+/* RATINGS */
+
+.ratings {
+    grid-column: rt-start / rt-end;
+}
+
+[class^="rating-card"] {
+    background-color: var(--light-grayish-magenta);
+    border-radius: 5px;
+    padding: 20px 15px;
+    margin-top: 20px;
+}
+
+.rating-card-1 {
+    margin-left: -160px;
+    margin-right: 80px;
+}
+
+.rating-card-2 {
+    margin-left: -120px;
+    margin-right: 40px;
+}
+
+.rating-card-3 {
+    margin-left: -80px;
+}
+
+.rating-card-stars {
+    padding-right: 25px;
+}
+
+.rating-card-text {
+    color: var(--dark-magenta);
+}
+
+
+/* FEEDBACK */
+
+
+.feedbacks {
+    grid-column: fb-start / fb-end;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+[class^="feedback-card"] {
+    background-color: var(--dark-magenta);
+    border-radius: 10px;
+    display: grid;
+    padding: 50px;
+    gap: 25px;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "av inf inf" "txt txt txt";
+}
+
+.feedback-card-2 {
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.feedback-card-3 {
+    margin-top: 40px;
+    margin-bottom: -40px;
+}
+
+
+.feedback-avatar {
+    grid-column: av-start / av-end;
+}
+
+.feedback-avatar > img {
+    border-radius: 50%;
+    max-height: 48px;
+}
+
+.feedback-infos {
+    grid-column: inf-start / inf-end;
+    line-height: 1.5;
+}
+
+
+.feedback-infos-name {
+    color: var(--white);
+}
+.feedback-infos-title {
+    color: var(--soft-pink);
+}
+
+
+.feedback-text {
+    grid-column: txt-start / txt-end;
+    color: var(--white);
+    line-height: 2;
+}
