@@ -1,0 +1,149 @@
+body {
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+
+    --paragraphs-white: hsla(0, 0%, 100%, 0.75);
+    --stats-slight-transparent: hsla(0, 0%, 100%, 0.6);
+
+
+
+    font-size: 15px;
+    font-family: 'Inter' !important;
+
+
+    --font-normal: 400;
+    --font-bold: 700;
+    background-color: var(--very-dark-blue);
+
+    display: flex;
+    height: 100vh;
+
+}
+
+/* RESETS */
+h1, h2, h3, h4, h5, h6, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+
+.accent {
+    color: var(--soft-violet);
+}
+
+/* img displayed right if is a desktop view, top if it's mobile */
+#card-main-container {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--dark-desaturated-blue);
+
+    border-radius: 5px;
+    max-width: 1000px;
+    margin: auto;
+
+}
+
+#card-content-container {
+    width: 50%;
+    padding: 48px 56px;
+    /* background-color: red; */
+    box-sizing: border-box;
+}
+
+#card-content-title {
+    font-family: 'Inter';
+    font-size: 36px;
+    color: white;
+}
+
+#card-content-text {
+    font-family: 'Inter';
+    line-height: 1.7;
+    font-size: 15px;
+    color: var(--paragraphs-white);
+
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+
+#card-content-stats-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+
+.stat-container {
+    margin-top: 32px;
+    font-family: 'Inter';
+    text-transform: uppercase;
+}
+
+.stat-number {
+    font-weight: var(--font-bold);
+    font-size: 24px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: var(--stats-slight-transparent);
+}
+
+#card-img-container {
+    width: 50%;
+    border-radius: 5px;
+    position: relative;
+}
+
+.img-overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #590d88;
+    opacity: 0.6;
+}
+
+
+#card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+
+
+
+@media (max-width: 780px) {
+
+    #card-main-container {
+        max-width: 90vw;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    #card-content-container {
+        width: 100% !important;
+    }
+
+    #card-img-container {
+        width: 100% !important;
+        height: 33% !important;
+    }
+
+    #card-content-stats-line {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .stat-container {
+        margin-top: 25px;
+    }
+}
