@@ -7,17 +7,8 @@ This is a list of frontend challenges i've made from the website https://www.fro
 
 # Next on list :
 
-- Challenge 7
-- Challenge 8
-- Challenge 9
-- Challenge 10
-- Challenge 11
-- Challenge 12
-- Challenge 13
-- Challenge 14
-- Challenge 15
+- Challenge 10 to 15
 
-- Readme.md of challenges
+- Readme.md of challenges (sorry i'm messy with side projects)
 - Refactor archi according to difficulty level
 - deploy "NEWBIES" challenges
-
